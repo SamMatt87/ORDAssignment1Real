@@ -59,11 +59,20 @@ REVIEW_TYPE(1,'Rudy Avila','Tchaikovskys Swan Lake remains a ballet favorite and
 REVIEW_TYPE(2,'Mateo','Herbert Von Karajan comes to mind. Slow. No sense of the arc of the entire dance, but rather a series of orchestral pieces that are played mostly mezzo forte, with limited drama and zero spontaneity. In sum, the performance fails to realize the composers intentions. I purchased the recording based on the reviews here, but will be giving it away as a gift. I may try again with Bonynges recording, which is said to be more balletic, or continue to look into the more obscure Russian recordings.', 3.0, TO_DATE('01/07/2010', 'DD/MM/YYYY')),
 REVIEW_TYPE(3, 'S. Vinokurov', 'Love the CD (it has two rare favs of mine... the faster Black Swan Variation and the extended Russian Dance) however, I was shocked not to find Black Swan Pas de Deux. How can you have a COMPLETE Swan Lake recording and not include that?!?!?!',4.0, TO_DATE('31/07/2006', 'DD/MM/YYYY'))
 ), 1, 11.99));
-
+/
 INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART1','Piotr Ilyitch Tchaikovsky'));
 INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART2','Wolfgang Sawallisch'));
 INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART3','Philadelphia Orchestra'));
-
-INSERT INTO ROLE VALUES(ROLE_TYPE('ART1', 'ALB1','Composer'));
-INSERT INTO ROLE VALUES(ROLE_TYPE('ART2', 'ALB1','Conductor'));
-INSERT INTO ROLE VALUES(ROLE_TYPE('ART3', 'ALB1','Orchestra'));
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Composer'
+	FROM ARTIST ART, ALBUM ALB
+	WHERE ARTIST_ID = 'ART1' AND ALB.ALBUM_ID = 'ALB1';
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Conductor'
+	FROM ARTIST ART, ALBUM ALB
+	WHERE ARTIST_ID = 'ART2' AND ALB.ALBUM_ID = 'ALB1';
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Orchestra'
+	FROM ARTIST ART, ALBUM ALB
+	WHERE ARTIST_ID = 'ART3' AND ALB.ALBUM_ID = 'ALB1';
