@@ -1,5 +1,52 @@
 
-
+INSERT INTO CD VALUES (CD_TYPE('ALB990', 'The Magnificent Void',69,'New Age', TO_DATE('22/02/1996', 'DD/MM/YYYY'),
+TRACKS(TRACK_TYPE(1, 'Between the Gray and the Purple', 460, 0.99, 50),
+TRACK_TYPE(2, 'Void Memory One', 173, 0.99, 50),
+TRACK_TYPE(3, 'Infinite Shore', 467, 0.99, 50),
+TRACK_TYPE(4, 'Cloud of Unknowing', 638, 0.99, 50),
+TRACK_TYPE(5, 'Void Memory Two', 220, 0.99, 50),
+TRACK_TYPE(6, 'Void Memory Three', 220, 0.99, 50),
+TRACK_TYPE(7, 'The Magnificent Void', 792, 0.99, 50),
+TRACK_TYPE(8, 'Atlus', 1201, 0.99, 50)),
+REVIEWS_TABLE(REVIEW_TYPE(1,'Lonnie Collins', 'Another easy listening..', 4.0, TO_DATE('08/03/2016', 'DD/MM/YYYY')),
+REVIEW_TYPE(2,Null, 'Dark and spacey. Great nighttime music for reading or sleeping. One of the best ambient CDs I own.', 5.0, TO_DATE('28/03/2009','DD/MM/YYYY')),
+REVIEW_TYPE(3, Null, 'Im a fan of much of Steve Roachs work. Dreamtime Return is still a favorite. But Magnificent Void has none of the magical quality of those discs, and is downright dark. The repetitive bass notes and rumble might be nice for a sci-fi horror movie. But it makes for boring listening. Pass on this one.', 1.0, TO_DATE('29/04/2009', 'DD/MM/YYYY'))),1,13.99));
+/
+INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART991','Steve Roach'));
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Composer'
+	FROM ARTIST ART, CD ALB
+	WHERE ART.ARTIST_ID = 'ART991' AND ALB.ALBUM_ID = 'ALB990';
+/
+INSERT INTO CD VALUES (CD_TYPE('ALB991', 'The Magnificent',32,'Rap', TO_DATE('13/08/2002', 'DD/MM/YYYY'),
+TRACKS(TRACK_TYPE(1, 'The Magnificent - featuring Pauly Yamz and Baby Blak', 107, 1.29, 50),
+TRACK_TYPE(2, 'Shake It Off - featuring Chef Word', 53, 1.29, 50),
+TRACK_TYPE(3, 'For The Love of Da Game - featuring Pauly Yamz and Baby Blak', 83, 1.29, 50),
+TRACK_TYPE(4, 'How I Do - featuring Shawn Stockman (Boyz II Men)', 134, 1.29, 50),
+TRACK_TYPE(5, 'Break It Down - featuring J-Live', 67, 1.29, 50),
+TRACK_TYPE(6, ' Musik Lounge - featuring Odyssey', 158, 1.29, 50),
+TRACK_TYPE(7, 'Rock Wit U - featuring Erro', 97, 1.29, 50),
+TRACK_TYPE(8, 'Scram - featuring Freddie Foxxx', 99, 1.29, 50),
+TRACK_TYPE(9, 'My People - featuring Raheem', 71, 1.29, 50),
+TRACK_TYPE(10, 'Know Ur Hood - featuring Pauly Yamz and Chef Word', 89, 1.29, 50),
+TRACK_TYPE(11, 'Love Saviour - featuring Flo Brown and Raheem', 38, 1.29, 50),
+TRACK_TYPE(12, 'Mystery Man - featuring The Last Emperor', 153, 1.29, 50),
+TRACK_TYPE(13, 'We Are - featuring Cy Young and Raheem', 81, 1.29, 50),
+TRACK_TYPE(14, 'A Charmed Life - featuring J-Live', 118, 1.29, 50),
+TRACK_TYPE(15, 'We Live In Philly - featuring Jill Scott', 68, 1.29, 50),
+TRACK_TYPE(16, 'In Time - featuring V', 115, 1.29, 50)),
+REVIEWS_TABLE(REVIEW_TYPE(1,'Ryan Rose', 'This album is niceness. 100% natural churned butter baby! Lovely!', 5.0, TO_DATE('15/05/2003', 'DD/MM/YYYY')),
+REVIEW_TYPE(2,'L. Dogg', 'Had to have this one.Heavy beats,all round ensemble of artists and a general good feel of an album. Was lacking in some ways,just cant put my finger on it though!', 3.0, TO_DATE('28/02/2005','DD/MM/YYYY')),
+REVIEW_TYPE(3, Null, 'A truly stunning CD. Best beats and music I have had the pleasure of listenin to in a while. All bases covered with STYLE. Buy, listen and enjoy.', 5.0, TO_DATE('14/04/2015', 'DD/MM/YYYY'))),1,12.42));
+/
+INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART992','DJ Jazzy Jeff'));
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Rapper'
+	FROM ARTIST ART, CD ALB
+	WHERE ART.ARTIST_ID = 'ART992' AND ALB.ALBUM_ID = 'ALB991';
+/
 INSERT INTO CD VALUES (CD_TYPE('ALB992', 'The Vigil',85,'Jazz', TO_DATE('06/08/2013', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Galaxy 32 Star 4', 500, 1.29, 50),
 TRACK_TYPE(2, 'Planet Chia', 666, 1.29, 50),
