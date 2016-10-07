@@ -1,4 +1,43 @@
 
+INSERT INTO CD VALUES (CD_TYPE('ALB989', 'The Magnificent Moodies',74,'Rock', TO_DATE('15/12/2014', 'DD/MM/YYYY'),
+TRACKS(TRACK_TYPE(1, 'Ill Go Crazy', 131, 0.99, 50),
+TRACK_TYPE(2, 'Something You Got', 172, 0.99, 50),
+TRACK_TYPE(3, 'Go Now', 192, 0.99, 50),
+TRACK_TYPE(4, 'Cant Nobody Love You', 242, 0.99, 50),
+TRACK_TYPE(5, 'I Dont Mind', 207, 0.99, 50),
+TRACK_TYPE(6, 'Ive Got a Dream', 172, 0.99, 50),
+TRACK_TYPE(7, 'Let Me Go', 193, 0.99, 50),
+TRACK_TYPE(8, 'Stop', 126, 0.99, 50),
+TRACK_TYPE(9, 'Thank You Baby', 149, 0.99, 50),
+TRACK_TYPE(10, 'It Aint Necessarily So', 201, 0.99, 50),
+TRACK_TYPE(11, 'True Story', 105, 0.99, 50),
+TRACK_TYPE(12, 'Bye Bye Bird', 173, 0.99, 50),
+TRACK_TYPE(13, 'Lose Your Money (But Dont Lose Your Mind)', 119, 0.99, 50),
+TRACK_TYPE(14, 'Steal Your Heart Away', 134, 0.99, 50),
+TRACK_TYPE(15, 'Go Now! (First Version)', 229, 0.99, 50),
+TRACK_TYPE(16, 'Its Easy Child', 193, 0.99, 50),
+TRACK_TYPE(17, 'I Dont Want to Go on Without You', 166, 0.99, 50),
+TRACK_TYPE(18, 'Time Is on My Side', 183, 0.99, 50),
+TRACK_TYPE(19, 'From the Bottom of My Heart (I Love You)', 206, 0.99, 50),
+TRACK_TYPE(20, 'And My Babys Gone', 142, 0.99, 50),
+TRACK_TYPE(21, 'Everyday', 109, 0.99, 50),
+TRACK_TYPE(22, 'You Dont (All the Time)', 142, 0.99, 50),
+TRACK_TYPE(23, 'Boulevard De Madeleine', 175, 0.99, 50),
+TRACK_TYPE(24, 'This Is My House (But Nobody Calls)', 155, 0.99, 50),
+TRACK_TYPE(25, 'People Gotta Go', 155, 0.99, 50),
+TRACK_TYPE(26, 'Lifes Not Life', 155, 0.99, 50),
+TRACK_TYPE(27, 'He Can Win', 144, 0.99, 50)),
+REVIEWS_TABLE(REVIEW_TYPE(1,Null, 'I quess this is great for historic significance but the sound quality and music, for that matter, is horrible.', 1.0, TO_DATE('21/11/2009', 'DD/MM/YYYY')),
+REVIEW_TYPE(2,'Michael S', 'Nice history lesson. Better than I expected but certainly NOT like the Moodys I knew in college.', 4.0, TO_DATE('17/03/2015','DD/MM/YYYY')),
+REVIEW_TYPE(3, 'Robert E', 'Classic.', 5.0, TO_DATE('12/09/2016', 'DD/MM/YYYY'))),1,13.99));
+/
+INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART990','The Moody Blues'));
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Band'
+	FROM ARTIST ART, CD ALB
+	WHERE ART.ARTIST_ID = 'ART990' AND ALB.ALBUM_ID = 'ALB989';
+/
 INSERT INTO CD VALUES (CD_TYPE('ALB990', 'The Magnificent Void',69,'New Age', TO_DATE('22/02/1996', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Between the Gray and the Purple', 460, 0.99, 50),
 TRACK_TYPE(2, 'Void Memory One', 173, 0.99, 50),
