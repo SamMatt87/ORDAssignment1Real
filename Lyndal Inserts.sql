@@ -1,3 +1,5 @@
+-- QUESTION 1
+
 INSERT INTO CD VALUES(CD_TYPE('ALB1','Tchaikovsky: Swan Lake (Complete Ballet)', 180, 'Classical', TO_DATE('01/06/2004', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1,'Introduction: Moderato Assai - Allegro Ma Non Troppo',180,0.99,30),
 TRACK_TYPE(2,'No.1 - Scene: Allegro Giusto',180,0.99,30),
@@ -302,4 +304,186 @@ INSERT INTO ROLE
 	SELECT REF(ART), REF(ALB), 'Singer'
 	FROM ARTIST ART, CD ALB
 	WHERE ARTIST_ID = 'ART8' AND ALB.ALBUM_ID = 'ALB5';
+/
+
+-- QUESTION 3
+
+INSERT INTO CD VALUES(CD_TYPE('ALB6','Empire Burlesque', 46, 'Rock', TO_DATE('10/06/1985', 'DD/MM/YYYY'),
+TRACKS(TRACK_TYPE(1,'Tight Connection to My Heart (Has Anybody Seen My Love)',322,0.99,30),
+TRACK_TYPE(2,'Seeing the Real You at Last',261,0.99,30),
+TRACK_TYPE(3,'I''ll Remember You',254,0.99,30),
+TRACK_TYPE(4,'Clean Cut Kid',257,0.99,30),
+TRACK_TYPE(5,'Never Gonna Be the Same Again',191,0.99,30),
+TRACK_TYPE(6,'Trust Yourself',209,0.99,30),
+TRACK_TYPE(7,'Emotionally Yours',270,0.99,30),
+TRACK_TYPE(8,'When the Night Comes Falling from the Sky',450,0.99,30),
+TRACK_TYPE(9,'Something''s Burning, Baby',294,0.99,30),
+TRACK_TYPE(10,'Dark Eyes',307,0.99,30)),
+REVIEWS_TABLE(
+REVIEW_TYPE(1, NULL,'If you want to live life like it doesn''t matter, and if you think pain is a good form of entertainment, and if you hate yourself, your ears and your very soul, you should buy this album. It has bad production, horribly bad instrumentation, visciously bad arrangements, excruciatingly bad vocals, and an indescribably bad cover. If you like Elton John, you''ll like this CD! And that says more than I ever could! The songs themselves are not horrible, it is just the way they were crafted that makes it so utterly sickening to listen to. If I were you, I''d buy Planet Waves, Blood on the Tracks, Oh Mercy or Time Out of Mind and hear the works of genius, not the works of a demented tired musical wanderer, who was apparently out of ideas, hope, and musical direction.',0.0,TO_DATE('05/08/2002', 'DD/MM/YYYY')),
+REVIEW_TYPE(2,'Schroedinger','Bob Dylan has said on multiple occasions that he has never liked the great acclaim he''s been given nor the title ''Voice of a Generation'', and so produced crappy albums to silence the fanatics. Yeah, this would be one of them. Dylan meets 80''s synth? The result is . . . it''s terrifying.', 0.0, TO_DATE('26/12/2004', 'DD/MM/YYYY')),
+REVIEW_TYPE(3, 'Marc Pottle','Found a skip in one of the songs as if a few words were cut.... Sent it back once, (I think) and the next one skipped too ! ? ! Hmmm.. studio didn''t do right on this one. Amazon was great',3.0, TO_DATE('11/07/2013', 'DD/MM/YYYY')),
+REVIEW_TYPE(4, 'couchgrouch','don''t be misled by naysayers. this is a great record. I avoided it for years because of bad reviews. I took a chance on it 2 months ago and now it''s a staple in my cd player. it''s not Blood On the Tracks(what is?) but it''s a blast nonetheless. it''s catchy, stompin'' and downright funky. People complain that it''s too synthy, but it''s no more synthy than B.S.''s Born In the USA. Frankly, Empire is a better record. if Al Green had done Emotionally Yours, they''d say it was a great soul song. it is anyway. Something''s Burning is great. Trust Yourself, Clean Cut Kid are both funky as gramma''s old goat. Dark Eyes is fantastic and will stick in your head long after it''s over. the sound of the cd is contemporary, but so what? the songs are good, the performances are good. to me, that''s good music. don''t be put off because it doesn''t sound like a "Dylan album". check it out and give it a few listens. you won''t be disappointed.',4.0, TO_DATE('20/08/2000', 'DD/MM/YYYY')),
+REVIEW_TYPE(5, 'Eric','arguably his best album but I doubt it. I like it but Bob has done better -- although not recently. Despite the requirement for a longer review, I think that this is all that needs to be said.',4.0, TO_DATE('09/08/2013', 'DD/MM/YYYY')),
+REVIEW_TYPE(6, NULL,'In a decade where most of his work was mediocre at best, Bob Dylan hit the heights with this album full of catchy rock, compelling folk and touching love songs. By far, Dylan''s best album of the 80s. Two other Dylan goodies from the 80s are ''Infidels'' (1983) and ''Oh Mercy'' (1989).',5.0, TO_DATE('24/07/1998', 'DD/MM/YYYY'))
+), 1, 5.99));
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Singer'
+	FROM ARTIST ART, CD ALB
+	WHERE ARTIST_ID = 'ART996' AND ALB.ALBUM_ID = 'ALB6';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, CD ALB
+	WHERE ARTIST_ID = 'ART996' AND ALB.ALBUM_ID = 'ALB6';
+/
+INSERT INTO VINYL VALUES(VINYL_TYPE('ALB6','Empire Burlesque', 46, 'Rock', TO_DATE('10/06/1985', 'DD/MM/YYYY'),
+TRACKS(TRACK_TYPE(1,'Tight Connection to My Heart (Has Anybody Seen My Love)',322,0.99,30),
+TRACK_TYPE(2,'Seeing the Real You at Last',261,0.99,30),
+TRACK_TYPE(3,'I''ll Remember You',254,0.99,30),
+TRACK_TYPE(4,'Clean Cut Kid',257,0.99,30),
+TRACK_TYPE(5,'Never Gonna Be the Same Again',191,0.99,30),
+TRACK_TYPE(6,'Trust Yourself',209,0.99,30),
+TRACK_TYPE(7,'Emotionally Yours',270,0.99,30),
+TRACK_TYPE(8,'When the Night Comes Falling from the Sky',450,0.99,30),
+TRACK_TYPE(9,'Something''s Burning, Baby',294,0.99,30),
+TRACK_TYPE(10,'Dark Eyes',307,0.99,30)),
+REVIEWS_TABLE(
+REVIEW_TYPE(1, NULL,'If you want to live life like it doesn''t matter, and if you think pain is a good form of entertainment, and if you hate yourself, your ears and your very soul, you should buy this album. It has bad production, horribly bad instrumentation, visciously bad arrangements, excruciatingly bad vocals, and an indescribably bad cover. If you like Elton John, you''ll like this CD! And that says more than I ever could! The songs themselves are not horrible, it is just the way they were crafted that makes it so utterly sickening to listen to. If I were you, I''d buy Planet Waves, Blood on the Tracks, Oh Mercy or Time Out of Mind and hear the works of genius, not the works of a demented tired musical wanderer, who was apparently out of ideas, hope, and musical direction.',0.0,TO_DATE('05/08/2002', 'DD/MM/YYYY')),
+REVIEW_TYPE(2,'Schroedinger','Bob Dylan has said on multiple occasions that he has never liked the great acclaim he''s been given nor the title ''Voice of a Generation'', and so produced crappy albums to silence the fanatics. Yeah, this would be one of them. Dylan meets 80''s synth? The result is . . . it''s terrifying.', 0.0, TO_DATE('26/12/2004', 'DD/MM/YYYY')),
+REVIEW_TYPE(3, 'Marc Pottle','Found a skip in one of the songs as if a few words were cut.... Sent it back once, (I think) and the next one skipped too ! ? ! Hmmm.. studio didn''t do right on this one. Amazon was great',3.0, TO_DATE('11/07/2013', 'DD/MM/YYYY')),
+REVIEW_TYPE(4, 'couchgrouch','don''t be misled by naysayers. this is a great record. I avoided it for years because of bad reviews. I took a chance on it 2 months ago and now it''s a staple in my cd player. it''s not Blood On the Tracks(what is?) but it''s a blast nonetheless. it''s catchy, stompin'' and downright funky. People complain that it''s too synthy, but it''s no more synthy than B.S.''s Born In the USA. Frankly, Empire is a better record. if Al Green had done Emotionally Yours, they''d say it was a great soul song. it is anyway. Something''s Burning is great. Trust Yourself, Clean Cut Kid are both funky as gramma''s old goat. Dark Eyes is fantastic and will stick in your head long after it''s over. the sound of the cd is contemporary, but so what? the songs are good, the performances are good. to me, that''s good music. don''t be put off because it doesn''t sound like a "Dylan album". check it out and give it a few listens. you won''t be disappointed.',4.0, TO_DATE('20/08/2000', 'DD/MM/YYYY')),
+REVIEW_TYPE(5, 'Eric','arguably his best album but I doubt it. I like it but Bob has done better -- although not recently. Despite the requirement for a longer review, I think that this is all that needs to be said.',4.0, TO_DATE('09/08/2013', 'DD/MM/YYYY')),
+REVIEW_TYPE(6, NULL,'In a decade where most of his work was mediocre at best, Bob Dylan hit the heights with this album full of catchy rock, compelling folk and touching love songs. By far, Dylan''s best album of the 80s. Two other Dylan goodies from the 80s are ''Infidels'' (1983) and ''Oh Mercy'' (1989).',5.0, TO_DATE('24/07/1998', 'DD/MM/YYYY'))
+), 1, 25.26));
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Singer'
+	FROM ARTIST ART, VINYL ALB
+	WHERE ARTIST_ID = 'ART996' AND ALB.ALBUM_ID = 'ALB6';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, VINYL ALB
+	WHERE ARTIST_ID = 'ART996' AND ALB.ALBUM_ID = 'ALB6';
+/
+INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART10','Little Junior Parker'));
+INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART11','Kris Kristofferson'));
+INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART12','Sam Shepard'));
+INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART13','Tom Petty'));
+INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART14','Carole Sayer Bager'));
+INSERT INTO ARTIST VALUES(ARTIST_TYPE('ART9','J.B.F. Wright'));
+/
+INSERT INTO CD VALUES(CD_TYPE('ALB7','Knocked Out Loaded', 36, 'Rock', TO_DATE('14/07/1986', 'DD/MM/YYYY'),
+TRACKS(TRACK_TYPE(1,'You Wanna Ramble',191,0.99,30),
+TRACK_TYPE(2,'They Killed Him',240,0.99,30),
+TRACK_TYPE(3,'Driftin'' Too Far from Shore',219,0.99,30),
+TRACK_TYPE(4,'Precious Memories',193,0.99,30),
+TRACK_TYPE(5,'Maybe Someday',197,0.99,30),
+TRACK_TYPE(6,'Brownsville Girl',660,0.99,30),
+TRACK_TYPE(7,'Got My Mind Made Up',173,0.99,30),
+TRACK_TYPE(8,'Got My Mind Made Up',238,0.99,30)),
+REVIEWS_TABLE(
+REVIEW_TYPE(1, NULL,'Most of the reviews are by the same person. It is obvious that this album is simply awful and that the same person wrote all of the rave reviews below. Take my word for it. This album stinks. And thats saying a lot because I am a huge Dylan fan. Don''t Buy It!!!!',0.0,TO_DATE('24/03/1999', 'DD/MM/YYYY')),
+REVIEW_TYPE(2,'monkeytot','this lp isn''t as bad as its reputation. It''s got a lot of gut-bucket blues on it, the same kind that got accolades on LOVE AND THEFT. In fact, ''You Wanna ramble'' is a precursor to ''Summer Days'' off of L&T. ''Brownsville'' is great. Dylan delivers it in a dramatic monologue style, something he hasnt done before or since. This isn''t the worst Dylan. That honor goes to UNDER THE RED SKY.', 3.0, TO_DATE('11/04/2002', 'DD/MM/YYYY')),
+REVIEW_TYPE(3, NULL,'Maybe this isn''t Bob''s best cd, but it''s better than anything ever released by the Rolling Stones, the Beatles, or Paul Simon. Bob proves that even his scraps are more meaningfull than anything released by Eric Clapton or Neil Young.',0.0, TO_DATE('29/01/1999', 'DD/MM/YYYY')),
+REVIEW_TYPE(4, NULL,'This cd oozes with vibrancy and warmth. A pleasant journey to the heart of american music, with a world renowned conducter at the wheel. Survey says: buy it, you won''t regret it.',0.0, TO_DATE('21/01/1999', 'DD/MM/YYYY'))
+), 1, 5.99));
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Singer'
+	FROM ARTIST ART, CD ALB
+	WHERE ARTIST_ID = 'ART996' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, CD ALB
+	WHERE ARTIST_ID = 'ART996' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, CD ALB
+	WHERE ARTIST_ID = 'ART10' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, CD ALB
+	WHERE ARTIST_ID = 'ART11' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, CD ALB
+	WHERE ARTIST_ID = 'ART12' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, CD ALB
+	WHERE ARTIST_ID = 'ART13' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, CD ALB
+	WHERE ARTIST_ID = 'ART14' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, CD ALB
+	WHERE ARTIST_ID = 'ART9' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO VINYL VALUES(VINYL_TYPE('ALB7','Knocked Out Loaded', 36, 'Rock', TO_DATE('14/07/1986', 'DD/MM/YYYY'),
+TRACKS(TRACK_TYPE(1,'You Wanna Ramble',191,0.99,30),
+TRACK_TYPE(2,'They Killed Him',240,0.99,30),
+TRACK_TYPE(3,'Driftin'' Too Far from Shore',219,0.99,30),
+TRACK_TYPE(4,'Precious Memories',193,0.99,30),
+TRACK_TYPE(5,'Maybe Someday',197,0.99,30),
+TRACK_TYPE(6,'Brownsville Girl',660,0.99,30),
+TRACK_TYPE(7,'Got My Mind Made Up',173,0.99,30),
+TRACK_TYPE(8,'Got My Mind Made Up',238,0.99,30)),
+REVIEWS_TABLE(
+REVIEW_TYPE(1, NULL,'Most of the reviews are by the same person. It is obvious that this album is simply awful and that the same person wrote all of the rave reviews below. Take my word for it. This album stinks. And thats saying a lot because I am a huge Dylan fan. Don''t Buy It!!!!',0.0,TO_DATE('24/03/1999', 'DD/MM/YYYY')),
+REVIEW_TYPE(2,'monkeytot','this lp isn''t as bad as its reputation. It''s got a lot of gut-bucket blues on it, the same kind that got accolades on LOVE AND THEFT. In fact, ''You Wanna ramble'' is a precursor to ''Summer Days'' off of L&T. ''Brownsville'' is great. Dylan delivers it in a dramatic monologue style, something he hasnt done before or since. This isn''t the worst Dylan. That honor goes to UNDER THE RED SKY.', 3.0, TO_DATE('11/04/2002', 'DD/MM/YYYY')),
+REVIEW_TYPE(3, NULL,'Maybe this isn''t Bob''s best cd, but it''s better than anything ever released by the Rolling Stones, the Beatles, or Paul Simon. Bob proves that even his scraps are more meaningfull than anything released by Eric Clapton or Neil Young.',0.0, TO_DATE('29/01/1999', 'DD/MM/YYYY')),
+REVIEW_TYPE(4, NULL,'This cd oozes with vibrancy and warmth. A pleasant journey to the heart of american music, with a world renowned conducter at the wheel. Survey says: buy it, you won''t regret it.',0.0, TO_DATE('21/01/1999', 'DD/MM/YYYY'))
+), 1, 5.99));
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Singer'
+	FROM ARTIST ART, VINYL ALB
+	WHERE ARTIST_ID = 'ART996' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, VINYL ALB
+	WHERE ARTIST_ID = 'ART996' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, VINYL ALB
+	WHERE ARTIST_ID = 'ART10' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, VINYL ALB
+	WHERE ARTIST_ID = 'ART11' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, VINYL ALB
+	WHERE ARTIST_ID = 'ART12' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, VINYL ALB
+	WHERE ARTIST_ID = 'ART13' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, VINYL ALB
+	WHERE ARTIST_ID = 'ART14' AND ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, VINYL ALB
+	WHERE ARTIST_ID = 'ART9' AND ALB.ALBUM_ID = 'ALB7';
 /
