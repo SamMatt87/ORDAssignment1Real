@@ -40,6 +40,25 @@ AND REF(ALB) IN
 AND ALB.TITLE LIKE '%Swan Lake%';
 
 -- QUESTION 2
+CREATE OR REPLACE FUNCTION HIGH_DL_SONG
+   RETURN TRACK_TYPE
+IS
+   trackarray TRACKS;
+   total integer;
+   high_dl integer :=0;
+   high_dl_track TRACK_TYPE;
+
+BEGIN
+  SELECT TRACK INTO trackarray from CD where ALBUM_ID = 'ALB5';
+     total := trackarray.count;
+     FOR i in 1 .. total LOOP
+        IF(trackarray(i).DL_COUNT > high_dl) THEN
+          high_dl := trackarray(i).DL_COUNT;
+          high_dl_track := trackarray(i);
+        END IF;
+     END LOOP;
+  RETURN high_dl_track;
+END;
 
 -- QUESTION 3
 SELECT DISC.TITLE, DISC.RELEASE_DATE, DISC.PRICE
