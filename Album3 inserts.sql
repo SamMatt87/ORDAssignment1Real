@@ -1,4 +1,4 @@
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB986', 'I Can Stand A Little Rain',46,'Rock', TO_DATE('05/10/1999', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB986', 'I Can Stand A Little Rain',46,'Rock', TO_DATE('05/10/1999', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Put Out The Light', 250, 1.29, 50),
 TRACK_TYPE(2, 'I Can Stand A Little Rain', 212, 1.29, 50),
 TRACK_TYPE(3, 'I Get Mad', 217, 1.29, 50),
@@ -14,7 +14,7 @@ REVIEW_TYPE(2,Null, 'Went from 8 track to cassette to finally a CD of this album
 REVIEW_TYPE(3, null, 'Not well recorded and song selection is poor does not bring to life his full voice command Winterland San Francisco 1968 was the best.', 1.0, TO_DATE('23/08/2013', 'DD/MM/YYYY'))),3.35));
 /
 
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB987', 'Joe Cocker!',46,'Rock', TO_DATE('05/10/1999', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB987', 'Joe Cocker!',46,'Rock', TO_DATE('05/10/1999', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Dear Landlord (Album Version)', 205, 1.29, 50),
 TRACK_TYPE(2, 'Bird On A Wire (Album Version)', 268, 1.29, 50),
 TRACK_TYPE(3, 'Lawdy Miss Clawdy (Album Version)', 133, 1.29, 50),
@@ -32,7 +32,7 @@ REVIEW_TYPE(2,Null, 'The original and the greatest. Joe, I really miss you', 5.0
 REVIEW_TYPE(3, null, 'Great.', 5.0, TO_DATE('21/02/2015', 'DD/MM/YYYY'))),4.66));
 /
 
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB988', 'With A Little Help From My Friends',46,'Rock', TO_DATE('05/10/1999', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB988', 'With A Little Help From My Friends',46,'Rock', TO_DATE('05/10/1999', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Feelin Alright', 250, 1.29, 50),
 TRACK_TYPE(2, 'Bye Bye Blackbird', 207, 1.29, 50),
 TRACK_TYPE(3, 'Change In Louise', 203, 1.29, 50),
@@ -55,7 +55,7 @@ Listening to these songs now, its interesting to hear Jimmy Page underplaying hi
 
 The sound is a bit cleaner on this remaster, and the bonus tracks, while worth a listen, neither add to or detract from the recordings status.', 5.0, TO_DATE('19/03/2010', 'DD/MM/YYYY'))),4.99));
 /
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB989', 'The Magnificent Moodies',74,'Rock', TO_DATE('15/12/2014', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB989', 'The Magnificent Moodies',74,'Rock', TO_DATE('15/12/2014', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Ill Go Crazy', 131, 0.99, 50),
 TRACK_TYPE(2, 'Something You Got', 172, 0.99, 50),
 TRACK_TYPE(3, 'Go Now', 192, 0.99, 50),
@@ -88,7 +88,7 @@ REVIEW_TYPE(2,'Michael S', 'Nice history lesson. Better than I expected but cert
 REVIEW_TYPE(3, 'Robert E', 'Classic.', 5.0, TO_DATE('12/09/2016', 'DD/MM/YYYY'))),13.99));
 /
 
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB990', 'The Magnificent Void',69,'New Age', TO_DATE('22/02/1996', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB990', 'The Magnificent Void',69,'New Age', TO_DATE('22/02/1996', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Between the Gray and the Purple', 460, 0.99, 50),
 TRACK_TYPE(2, 'Void Memory One', 173, 0.99, 50),
 TRACK_TYPE(3, 'Infinite Shore', 467, 0.99, 50),
@@ -101,7 +101,7 @@ REVIEWS_TABLE(REVIEW_TYPE(1,'Lonnie Collins', 'Another easy listening..', 4.0, T
 REVIEW_TYPE(2,Null, 'Dark and spacey. Great nighttime music for reading or sleeping. One of the best ambient CDs I own.', 5.0, TO_DATE('28/03/2009','DD/MM/YYYY')),
 REVIEW_TYPE(3, Null, 'Im a fan of much of Steve Roachs work. Dreamtime Return is still a favorite. But Magnificent Void has none of the magical quality of those discs, and is downright dark. The repetitive bass notes and rumble might be nice for a sci-fi horror movie. But it makes for boring listening. Pass on this one.', 1.0, TO_DATE('29/04/2009', 'DD/MM/YYYY'))),13.99));
 /
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB991', 'The Magnificent',32,'Rap', TO_DATE('13/08/2002', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB991', 'The Magnificent',32,'Rap', TO_DATE('13/08/2002', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'The Magnificent - featuring Pauly Yamz and Baby Blak', 107, 1.29, 50),
 TRACK_TYPE(2, 'Shake It Off - featuring Chef Word', 53, 1.29, 50),
 TRACK_TYPE(3, 'For The Love of Da Game - featuring Pauly Yamz and Baby Blak', 83, 1.29, 50),
@@ -123,7 +123,7 @@ REVIEW_TYPE(2,'L. Dogg', 'Had to have this one.Heavy beats,all round ensemble of
 REVIEW_TYPE(3, Null, 'A truly stunning CD. Best beats and music I have had the pleasure of listenin to in a while. All bases covered with STYLE. Buy, listen and enjoy.', 5.0, TO_DATE('14/04/2015', 'DD/MM/YYYY'))),12.42));
 /
 
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB992', 'The Vigil',85,'Jazz', TO_DATE('06/08/2013', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB992', 'The Vigil',85,'Jazz', TO_DATE('06/08/2013', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Galaxy 32 Star 4', 500, 1.29, 50),
 TRACK_TYPE(2, 'Planet Chia', 666, 1.29, 50),
 TRACK_TYPE(3, 'portals to Forever', 962, 1.29, 50),
@@ -137,7 +137,7 @@ REVIEW_TYPE(2,Null, 'I consider Chick Corea to be the best jazz musician of all 
 REVIEW_TYPE(3, Null, 'Well, let me clarify that... If your used to and like the "Electrik Band" and the more progressive side of Chic and his band members, then this is not for you! This CD is very mellow!', 1.0, TO_DATE('14/04/2015', 'DD/MM/YYYY'))),12.28));
 /
 
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB993', 'Childrens Songs',32,'Jazz', TO_DATE('30/09/2008', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB993', 'Childrens Songs',32,'Jazz', TO_DATE('30/09/2008', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Childrens Songs No. 1', 107, 1.29, 50),
 TRACK_TYPE(2, 'Childrens Songs No. 2', 53, 1.29, 50),
 TRACK_TYPE(3, 'Childrens Songs No. 3', 83, 1.29, 50),
@@ -162,7 +162,7 @@ REVIEWS_TABLE(REVIEW_TYPE(1,Null, 'OK, blasphemy coming, but to tell the truth I
 REVIEW_TYPE(2,'Martin', 'A classic. Períod.', 5.0, TO_DATE('17/08/2015','DD/MM/YYYY')),
 REVIEW_TYPE(3, 'Domingo Carbrera', 'One of the best recordings of this great master. !', 5.0, TO_DATE('14/04/2015', 'DD/MM/YYYY'))),10.18));
 
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB994', 'Duet',85,'Jazz', TO_DATE('06/08/2013', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB994', 'Duet',85,'Jazz', TO_DATE('06/08/2013', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Very Early', 553, 1.29, 50),
 TRACK_TYPE(2, 'How Insensitive', 457, 1.29, 50),
 TRACK_TYPE(3, 'Deja Vu', 541, 1.29, 50),
@@ -180,7 +180,7 @@ REVIEW_TYPE(2,'Courton Loreno', 'Arrived in timely fashion, no damage done to it
 REVIEW_TYPE(3, 'meryes', 'This CD Duet Chick and Hiromi is both artists showcasing their artisty, but I felt that it was too "competitive". Instead of a wonderful collaborative listening experience, I felt as if I listened to two great artists competing with each other. They did not blend and complement each other as much as fight for center stage. I much prefer Hiromis solo album Place To Be to this collaboration.', 2.0, TO_DATE('27/01/2011', 'DD/MM/YYYY'))),19.99));
 /
 
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB995', 'Blowin in the Wind',32,'Pop', TO_DATE('31/05/2011', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB995', 'Blowin in the Wind',32,'Pop', TO_DATE('31/05/2011', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Railroad', 185, 0.99, 50),
 TRACK_TYPE(2, 'Blowin in the Wind', 131, 0.99, 50),
 TRACK_TYPE(3, 'Edens Island', 127, 0.99, 50),
@@ -197,7 +197,7 @@ REVIEWS_TABLE(REVIEW_TYPE(1,Null, 'The hell is this', 1.0, TO_DATE('22/10/2014',
 REVIEW_TYPE(2,Null, 'Well I though it was Good.', 5.0, TO_DATE('18/10/2013','DD/MM/YYYY')),
 REVIEW_TYPE(3, Null, 'Meh, it was so-so', 2.5, TO_DATE('24/08/2016', 'DD/MM/YYYY'))),12.98));
 /
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB996', 'The Freewheelin Bob Dylan',49,'Rock', TO_DATE('12/8/1988', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB996', 'The Freewheelin Bob Dylan',49,'Rock', TO_DATE('12/8/1988', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Blowin in the Wind', 165, 0.99, 50),
 TRACK_TYPE(2, 'Girl from the North Country', 199, 0.99, 50),
 TRACK_TYPE(3, 'Masters of War', 271, 0.99, 50),
@@ -216,7 +216,7 @@ REVIEW_TYPE(2,'Donald Meek', 'I have many CDs in my juke boxes yet I get SACDs f
 REVIEW_TYPE(3, Null, 'One of the clearest records Ive ever listened to. Very high quality!', 5.0, TO_DATE('24/08/2016', 'DD/MM/YYYY'))),6.99));
 /
 
-INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB997', 'Weld',121,'Pop', TO_DATE('22/10/1991', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES (ALBUM_TYPE('ALB997', 'Weld',121,'Pop', TO_DATE('22/10/1991', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Hey Hey, My My (Into The Black) (1991 Live)', 342, 1.32, 50),
 TRACK_TYPE(2, 'Crime In the City (1991 Live)', 392, 1.32, 50),
 TRACK_TYPE(3, 'Blowin In the Wind (1991 Live)', 409, 1.32, 50),
@@ -238,7 +238,7 @@ REVIEW_TYPE(2,'Paul Hackbath', 'Very good.', 3.0, TO_DATE('20/05/2016','DD/MM/YY
 REVIEW_TYPE(3, Null, 'How could you go wrong when its Neil?', 4.0, TO_DATE('24/08/2016', 'DD/MM/YYYY'))),4.41));
 /
 
-INSERT INTO ALBUM3 VALUES(ALBUM_TYPE3('ALB999','Sketches of Spain', 45, 'Jazz', TO_DATE('01/01/1960', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES(ALBUM_TYPE('ALB999','Sketches of Spain', 45, 'Jazz', TO_DATE('01/01/1960', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1,'Concerto de Arunjez: Adagio',981,0.99,10),
 TRACK_TYPE(2,'Will O the wisp',229,0.99,50),
 TRACK_TYPE(3,'The Pan Piper',237,0.99,40),
@@ -250,7 +250,7 @@ REVIEW_TYPE(2,NULL,'Ive tried....really tried with this one , but it just doesnt
 REVIEW_TYPE(3, 'Sarah Knapp', 'My mom had this on vinyl when I was a small child. I grew up to these cuts and learned to love Miles Davis from a very early age. Ive had it on vinyl and cassette myself, but can no longer play those. This is AWESOME and brings my hear great joy!',5.0, TO_DATE('03/10/2006', 'DD/MM/YYYY'))
 ), 6.99));
 
-INSERT INTO ALBUM3 VALUES(ALBUM_TYPE3('ALB998','Bitches Brew', 105, 'Jazz', TO_DATE('08/06/1999', 'DD/MM/YYYY'),
+INSERT INTO ALBUM VALUES(ALBUM_TYPE('ALB998','Bitches Brew', 105, 'Jazz', TO_DATE('08/06/1999', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1,'Pharohs dance',1204,0.99,10),
 TRACK_TYPE(2,'Bitches Brew',1619,0.99,10),
 TRACK_TYPE(3,'Spanish Key',1052,0.99,40),
