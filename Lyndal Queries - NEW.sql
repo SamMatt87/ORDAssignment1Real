@@ -20,7 +20,7 @@ AND ALB.TITLE LIKE '%Swan Lake%';
 /
 -- QUESTION 2
 CREATE OR REPLACE FUNCTION HIGH_DL_SONG
-(P_TITLE IN VARCHAR2)
+(P_TITLE IN VARCHAR2, P_ARTIST IN VARCHAR2)
    RETURN TRACK_TYPE
 IS
    trackarray TRACKS;
@@ -28,7 +28,7 @@ IS
    high_dl integer :=0;
    high_dl_track TRACK_TYPE;
 BEGIN
-  SELECT TRACK INTO trackarray from ALBUM3 where ALBUM_ID = P_TITLE;
+  SELECT ALB.TRACK INTO trackarray from ALBUM3 ALB, ROLE3 R, ARTIST ART WHERE ALB.ALBUM_ID = P_TITLE AND ART.ARTIST_NAME = P_ARTIST AND REF(ALB) = R.ALBUM_ID AND REF(ART) = R.ARTIST_ID
      total := trackarray.count;
      FOR i in 1 .. total LOOP
         IF(trackarray(i).DL_COUNT > high_dl) THEN
