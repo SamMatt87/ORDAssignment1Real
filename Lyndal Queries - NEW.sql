@@ -28,7 +28,7 @@ IS
    high_dl integer :=0;
    high_dl_track TRACK_TYPE;
 BEGIN
-  SELECT ALB.TRACK INTO trackarray from ALBUM3 ALB, ROLE3 R, ARTIST ART WHERE ALB.ALBUM_ID = P_TITLE AND ART.ARTIST_NAME = P_ARTIST AND REF(ALB) = R.ALBUM_ID AND REF(ART) = R.ARTIST_ID
+  SELECT TRACK INTO trackarray from ALBUM
      total := trackarray.count;
      FOR i in 1 .. total LOOP
         IF(trackarray(i).DL_COUNT > high_dl) THEN
