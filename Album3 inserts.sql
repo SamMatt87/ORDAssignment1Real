@@ -14,7 +14,7 @@ REVIEW_TYPE(2,Null, 'Went from 8 track to cassette to finally a CD of this album
 REVIEW_TYPE(3, null, 'Not well recorded and song selection is poor does not bring to life his full voice command Winterland San Francisco 1968 was the best.', 1.0, TO_DATE('23/08/2013', 'DD/MM/YYYY'))),3.35));
 /
 
-INSERT INTO ALBUM_3 VALUES (ALBUM_TYPE3('ALB987', 'Joe Cocker!',46,'Rock', TO_DATE('05/10/1999', 'DD/MM/YYYY'),
+INSERT INTO ALBUM3 VALUES (ALBUM_TYPE3('ALB987', 'Joe Cocker!',46,'Rock', TO_DATE('05/10/1999', 'DD/MM/YYYY'),
 TRACKS(TRACK_TYPE(1, 'Dear Landlord (Album Version)', 205, 1.29, 50),
 TRACK_TYPE(2, 'Bird On A Wire (Album Version)', 268, 1.29, 50),
 TRACK_TYPE(3, 'Lawdy Miss Clawdy (Album Version)', 133, 1.29, 50),
