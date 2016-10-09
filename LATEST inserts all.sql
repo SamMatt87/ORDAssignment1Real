@@ -1148,3 +1148,62 @@ INSERT INTO ROLE
 	FROM ARTIST ART, ALBUM ALB
 	WHERE ARTIST_ID = 'ART9' AND ALB.ALBUM_ID = 'ALB7';
 /
+INSERT INTO ALBUM VALUES(ALBUM_TYPE('ALB8','Oh Mercy', 46, 'Rock', TO_DATE('18/09/1989', 'DD/MM/YYYY'),
+TRACKS(TRACK_TYPE(1,'Political World',322,0.99,30),
+TRACK_TYPE(2,'Where Teardrops Fall',261,0.99,30),
+TRACK_TYPE(3,'Everything Is Broken',254,0.99,30),
+TRACK_TYPE(4,'Ring Them Bells',257,0.99,30),
+TRACK_TYPE(5,'Man in the Long Black Coat',191,0.99,30),
+TRACK_TYPE(6,'Most of the Time',209,0.99,30),
+TRACK_TYPE(7,'What Good Am I',270,0.99,30),
+TRACK_TYPE(8,'Disease of Conceit',450,0.99,30),
+TRACK_TYPE(9,'What Was It You Wanted',294,0.99,30),
+TRACK_TYPE(10,'Shooting Star',307,0.99,30)),
+REVIEWS_TABLE(
+REVIEW_TYPE(1, 'Jon Nelson','This one of the best albums of the 1980''s. It has an unique sound. This is my favorite Bob Dylan album (I have over 18 of his albums). The SACD is marginally better than the standard CD but you will not be disappointed.',5.0,TO_DATE('23/06/2014', 'DD/MM/YYYY')),
+REVIEW_TYPE(2, NULL ,'I''m sorry to say it but this album just isn''t up to Dylan par. With the exception of Ring Them Bells, there isn''t a truly good song on the CD. Its very forced sounding and the writing is really gimmicky, as if Dylan doesn''t actually have much to say so he tries to go back in time with ''Political World'' and ''Disease of Conceit'', but they just come off sounding phony. If you''re a true Dylan fan, buy this album just to have it, but otherwise, you could do better with something from the 60''s or 70''s.', 2.0, TO_DATE('12/01/2001', 'DD/MM/YYYY'))
+), 8.99));
+/
+INSERT INTO CD
+  SELECT ALB.*, 1, 6.99
+  FROM ALBUM ALB
+  WHERE ALB.ALBUM_ID = 'ALB8';
+/
+INSERT INTO VINYL
+  SELECT ALB.*, 1, 23.60
+  FROM ALBUM ALB
+  WHERE ALB.ALBUM_ID = 'ALB8';
+/
+INSERT INTO MP3
+  SELECT ALB.*, 8.99
+  FROM ALBUM ALB
+  WHERE ALB.ALBUM_ID = 'ALB8';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Singer'
+	FROM ARTIST ART, ALBUM ALB
+	WHERE ARTIST_ID = 'ART996' AND ALB.ALBUM_ID = 'ALB8';
+/
+INSERT INTO ROLE
+	SELECT REF(ART), REF(ALB), 'Songwriter'
+	FROM ARTIST ART, ALBUM ALB
+	WHERE ARTIST_ID = 'ART996' AND ALB.ALBUM_ID = 'ALB8';
+/
+INSERT INTO ALSO_BOUGHT
+	SELECT REF(FIR_ALB), REF(SEC_ALB)
+	FROM ALBUM FIR_ALB, ALBUM SEC_ALB
+	WHERE FIR_ALB.ALBUM_ID = 'ALB6'
+	AND SEC_ALB.ALBUM_ID = 'ALB7';
+/
+INSERT INTO ALSO_BOUGHT
+	SELECT REF(FIR_ALB), REF(SEC_ALB)
+	FROM ALBUM FIR_ALB, ALBUM SEC_ALB
+	WHERE FIR_ALB.ALBUM_ID = 'ALB6'
+	AND SEC_ALB.ALBUM_ID = 'ALB8';
+/
+INSERT INTO ALSO_BOUGHT
+	SELECT REF(FIR_ALB), REF(SEC_ALB)
+	FROM ALBUM FIR_ALB, ALBUM SEC_ALB
+	WHERE FIR_ALB.ALBUM_ID = 'ALB7'
+	AND SEC_ALB.ALBUM_ID = 'ALB8';
+/
